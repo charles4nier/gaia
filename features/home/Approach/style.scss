@@ -1,0 +1,114 @@
+.approach {
+	padding: 0;
+	background: transparent;
+	position: relative;
+
+	&__title {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(28px, 3vw, 36px);
+		font-weight: 500;
+		color: $black-primary;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+		margin-bottom: $spacing-lg; // 24px
+		text-align: left;
+		position: relative;
+		padding-bottom: $spacing-md;
+		
+		// Trait vert sous le titre
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 48px;
+			height: 2px;
+			background: #3c6e3c;
+		}
+	}
+
+	&__subtitle {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(15px, 1.5vw, 18px);
+		font-style: italic;
+		font-weight: 400;
+		color: $black-secondary;
+		line-height: 1.75;
+		letter-spacing: 0.01em;
+		margin-bottom: $spacing-5xl; // 80px
+		text-align: left;
+	}
+}
+
+.approach-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: $spacing-3xl; // 48px vertical et horizontal
+
+	li {
+		display: flex;
+		align-items: flex-start;
+		gap: $spacing-md; // 16px
+		padding: $spacing-lg 0; // 24px vertical seulement
+		position: relative;
+		border-bottom: 1px solid rgba(60, 110, 60, 0.08);
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+			color: #3c6e3c;
+			flex-shrink: 0;
+			margin-top: 2px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing-xs; // 4px
+		flex: 1;
+	}
+
+	&__title {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(16px, 1.4vw, 18px);
+		font-weight: 600;
+		color: $black-primary;
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		margin-bottom: $spacing-xs; // 4px
+	}
+
+	&__divider {
+		width: 40px;
+		height: 2px;
+		background: linear-gradient(90deg, #3c6e3c 0%, rgba(60, 110, 60, 0.3) 100%);
+		margin: $spacing-xs 0; // 4px
+		border-radius: 1px;
+	}
+
+	&__description {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(13px, 1.1vw, 15px);
+		font-weight: 400;
+		color: $black-secondary;
+		line-height: 1.7;
+		letter-spacing: 0.015em;
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 0;
+
+		li {
+			padding: $spacing-md 0;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+/* =========================
+   🎨 Palette GAIA
+   ========================= */
+
+/* --- Couleurs principales --- */
+$black: #1a1a1a;
+$black-primary: #2d2926;
+$black-secondary: #5b554f;
+
+$white: #ffffff;
+$white-secondary: #f3f1ed;
+$white-tertiary: #faf8f6;
+
+$accent-green: #3a6b2a; // Vert GAIA
+$accent-green-dark: #254312; // Nuance plus claire pour hover
+$accent-ocre: #b76b59;
+
+/* --- États et variations --- */
+$success: $accent-green;
+$error: #d54c4c;
+$warning: #e2b441;
+
+/* --- Dégradés --- */
+$gradient-green: linear-gradient(135deg, #254312, #3d7a5a);
+$gradient-ocre: linear-gradient(135deg, #b76b59, #8d4f43);
+
+/* --- Ombres & bordures --- */
+$shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+$shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
+$shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+/* =========================
+   📏 Design System - Spacing
+   ========================= */
+
+/* --- Espacements de base (scale 8px) --- */
+$spacing-xs: 4px;    // 0.5x
+$spacing-sm: 8px;    // 1x
+$spacing-md: 16px;   // 2x
+$spacing-lg: 24px;   // 3x
+$spacing-xl: 32px;   // 4x
+$spacing-2xl: 40px;  // 5x
+$spacing-3xl: 48px;  // 6x
+$spacing-4xl: 64px;  // 8x
+$spacing-5xl: 80px;  // 10x
+
+/* --- Padding sections (vertical) --- */
+$section-padding-y: $spacing-4xl;      // 64px
+$section-padding-y-mobile: $spacing-3xl; // 48px
+
+/* --- Espacements internes (entre éléments dans un container) --- */
+$content-gap-sm: $spacing-sm;   // 8px - entre éléments proches
+$content-gap-md: $spacing-md;   // 16px - entre éléments standards
+$content-gap-lg: $spacing-lg;   // 24px - entre groupes d'éléments
+$content-gap-xl: $spacing-xl;   // 32px - entre sections internes
+
+/* --- Marges de titres --- */
+$title-margin-bottom: $spacing-xl;        // 32px
+$title-margin-bottom-mobile: $spacing-lg; // 24px
+
+/* --- Padding container interne (réduit pour éviter doublon avec section) --- */
+$container-padding-y: $spacing-2xl;      // 40px (déjà défini dans .container)
+$container-padding-y-mobile: $spacing-lg; // 24px
+
+/* =========================
+   📝 Design System - Typography Hierarchy
+   ========================= */
+
+/* --- Tailles de texte hiérarchiques --- */
+$text-size-level-1: 18px;  // Texte principal secondaire (tagline, intro important)
+$text-size-level-2: 16px;  // Texte standard (body)
+$text-size-level-3: 14px;  // Texte secondaire (description, sous-titres)
+
+/* --- Mobile --- */
+$text-size-level-1-mobile: 16px;
+$text-size-level-2-mobile: 15px;
+$text-size-level-3-mobile: 13px;

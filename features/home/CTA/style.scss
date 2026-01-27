@@ -1,0 +1,48 @@
+.cta {
+	padding: $section-padding-y 0;
+	background: $gradient-green;
+	color: $white;
+	text-align: center;
+
+	&__title {
+		font-size: 36px;
+		margin-bottom: $title-margin-bottom;
+		color: $white;
+	}
+
+	&__description {
+		font-size: 18px;
+		margin-bottom: $content-gap-xl;
+		opacity: 0.95;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.8;
+	}
+
+	.button-contact {
+		background-color: $white;
+		color: $accent-green;
+		padding: 16px 32px;
+		font-size: 18px;
+
+		&:hover {
+			background-color: $white-secondary;
+			transform: translateY(-2px);
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: $section-padding-y-mobile 0;
+
+		&__title {
+			font-size: 28px;
+			margin-bottom: $title-margin-bottom-mobile;
+		}
+
+		&__description {
+			font-size: 16px;
+			margin-bottom: $content-gap-lg;
+		}
+	}
+}

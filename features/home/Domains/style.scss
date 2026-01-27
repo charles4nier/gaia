@@ -1,0 +1,77 @@
+.domains {
+	padding: 0;
+	background: transparent;
+	position: relative;
+
+	&__title {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(28px, 3vw, 36px);
+		font-weight: 500;
+		color: $black-primary;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+		margin-bottom: $spacing-4xl; // 64px
+		text-align: left;
+		position: relative;
+		padding-bottom: $spacing-md;
+		
+		// Trait vert sous le titre
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 48px;
+			height: 2px;
+			background: #3c6e3c;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		width: 100%;
+	}
+
+	li {
+		padding: $spacing-lg 0; // 24px vertical seulement
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(15px, 1.3vw, 18px);
+		font-weight: 500;
+		color: $black-primary;
+		line-height: 1.75;
+		letter-spacing: 0.01em;
+		text-align: left;
+		display: flex;
+		align-items: flex-start;
+		gap: $spacing-sm;
+
+		&::before {
+			content: "•";
+			color: #3c6e3c;
+			font-size: 1em;
+			font-weight: bold;
+			flex-shrink: 0;
+			margin-top: 0.1em; // Petit ajustement pour aligner avec la première ligne
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: $spacing-3xl 0;
+
+		&__wrapper {
+			grid-template-columns: 1fr;
+			gap: $spacing-xl;
+		}
+	}
+}

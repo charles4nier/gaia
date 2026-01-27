@@ -1,0 +1,190 @@
+.target-audience {
+	padding: $spacing-5xl 0; // 80px - espacement généreux selon Swiss Design
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 244, 234, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+	position: relative;
+	overflow: hidden;
+
+
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(28px, 3vw, 36px);
+		font-weight: 500;
+		color: $black-primary;
+		letter-spacing: -0.02em; // Légère compression pour élégance
+		line-height: 1.2;
+		margin-bottom: $spacing-xl; // 32px - espacement plus généreux après titre
+		position: relative;
+		padding-bottom: $spacing-md;
+		
+		// Trait vert sous le titre
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 48px;
+			height: 2px;
+			background: #3c6e3c;
+		}
+	}
+
+	&__intro {
+		font-size: clamp(15px, 1.5vw, 18px);
+		font-weight: 400;
+		line-height: 1.75; // Légèrement augmenté pour meilleure lisibilité
+		letter-spacing: 0.01em;
+		color: $black-secondary;
+		margin-bottom: $spacing-5xl; // 80px - espacement encore plus généreux avant les cartes
+		max-width: 68ch; // Légèrement augmenté pour meilleure lisibilité
+	}
+
+	&__list {
+		margin-bottom: $spacing-5xl; // 80px - espacement généreux avant conclusion
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: $spacing-xl; // 32px - gap généreux entre cartes
+		align-items: stretch;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start; // Alignement en haut selon Swiss Design
+			gap: $spacing-md; // 16px - espacement interne entre titre et texte
+			padding: $spacing-2xl; // 40px - padding encore plus généreux
+			background: rgba(255, 255, 255, 0.6);
+			border: 1px solid rgba(60, 110, 60, 0.08);
+			border-radius: 8px;
+			height: 100%;
+			position: relative;
+		}
+	}
+
+	&__item-title {
+		font-size: clamp(17px, 1.4vw, 21px);
+		font-weight: 600; // Plus épais comme dans "Notre approche"
+		line-height: 1.35;
+		letter-spacing: -0.015em;
+		color: $black-primary; // Titres en noir
+		margin-bottom: $spacing-sm; // 8px - espacement plus généreux après titre
+		display: flex;
+		align-items: flex-start;
+		gap: $spacing-md; // Espacement entre le trait et le titre
+	}
+   
+	&__item-accent {
+		display: block;
+		flex-shrink: 0;
+		width: 32px;
+		height: 2px;
+		background-color: $accent-green;
+		margin-top: 13px;
+	}
+
+	&__item-subtitle {
+		font-size: clamp(14px, 1.2vw, 16px);
+		font-weight: 400;
+		line-height: 1.75; // Augmenté pour meilleure lisibilité
+		letter-spacing: 0.005em; // Légèrement réduit pour plus de fluidité
+		color: $black-secondary;
+		margin-top: auto; // Pousse le texte vers le bas pour alignement uniforme
+	}
+
+	&__quote {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		background: #eef4ea; // Fond vert pâle
+		padding: $spacing-5xl 0; // 80px
+		margin-top: $spacing-5xl; // 80px
+
+		.container {
+			max-width: 720px;
+			margin: 0 auto;
+		}
+
+		p {
+			font-family: var(--font-inter), sans-serif;
+			font-size: clamp(22px, 3vw, 32px);
+			font-weight: 400;
+			font-style: italic;
+			color: $black-primary;
+			line-height: 1.5;
+			letter-spacing: 0.01em;
+			margin: 0;
+			padding-left: 24px;
+			border-left: 3px solid #3c6e3c;
+			
+			&::before {
+				content: '"';
+			}
+			
+			&::after {
+				content: '"';
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding: $spacing-4xl 0; // 64px sur tablette
+
+		&__title {
+			margin-bottom: $spacing-lg; // 24px
+		}
+
+		&__intro {
+			margin-bottom: $spacing-4xl; // 64px
+			max-width: 100%;
+		}
+
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+			gap: $spacing-xl; // 32px - gap plus généreux
+			margin-bottom: $spacing-4xl; // 64px
+
+			li {
+				padding: $spacing-xl; // 32px
+			}
+		}
+
+		&__quote {
+			margin-top: $spacing-4xl; // 64px
+			padding: $spacing-4xl 0; // 64px
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: $spacing-3xl 0; // 48px sur mobile
+
+		&__title {
+			margin-bottom: $spacing-lg; // 24px
+		}
+
+		&__intro {
+			margin-bottom: $spacing-3xl; // 48px
+		}
+
+		&__list {
+			grid-template-columns: 1fr;
+			gap: $spacing-xl; // 32px - gap plus généreux
+			margin-bottom: $spacing-3xl; // 48px
+
+			li {
+				padding: $spacing-xl; // 32px
+			}
+		}
+
+		&__quote {
+			margin-top: $spacing-3xl; // 48px
+			padding: $spacing-3xl 0; // 48px
+		}
+	}
+}

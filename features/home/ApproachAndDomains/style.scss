@@ -1,0 +1,136 @@
+.approach-domains {
+	padding: $spacing-5xl 0;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 244, 234, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+	position: relative;
+
+	// Ligne décorative en bas
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent 0%, rgba(60, 110, 60, 0.2) 50%, transparent 100%);
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: $spacing-5xl; // 80px
+		align-items: start;
+	}
+
+	&__col {
+		&--approach {
+			// Colonne de gauche, pas de style spécial
+		}
+
+		&--domains {
+			// Colonne de droite avec encart noir léger pour le contenu
+			.domains {
+				&__title {
+					// Le titre reste normal
+				}
+
+				&__wrapper {
+					background: rgba(0, 0, 0, 0.03);
+					padding: $spacing-2xl;
+					border-radius: 8px;
+					text-align: center;
+					margin-top: $spacing-4xl; // Espacement après le titre
+				}
+
+				ul {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding: $spacing-4xl 0; // 64px sur tablette
+		
+		&__wrapper {
+			grid-template-columns: 1fr;
+			gap: $spacing-4xl;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: $spacing-3xl 0; // 48px sur mobile
+		
+		&__wrapper {
+			gap: $spacing-3xl;
+		}
+	}
+}
+
+.approach-domains__quote {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background: #eef4ea; // Fond vert pâle
+	padding: $spacing-5xl 0; // 80px
+
+	// Ligne décorative fine en bas
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent 0%, rgba(60, 110, 60, 0.2) 50%, transparent 100%);
+	}
+
+	// Ligne décorative fine en haut pour la première citation
+	&--first {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: linear-gradient(90deg, transparent 0%, rgba(60, 110, 60, 0.2) 50%, transparent 100%);
+		}
+	}
+
+	.container {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	p {
+		font-family: var(--font-inter), sans-serif;
+		font-size: clamp(22px, 3vw, 32px);
+		font-weight: 400;
+		font-style: italic;
+		color: $black-primary;
+		line-height: 1.5;
+		letter-spacing: 0.01em;
+		margin: 0;
+		padding-left: 24px;
+		border-left: 3px solid #3c6e3c;
+		
+		&::before {
+			content: '"';
+		}
+		
+		&::after {
+			content: '"';
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding: $spacing-4xl 0; // 64px sur tablette
+	}
+
+	@media (max-width: 768px) {
+		padding: $spacing-3xl 0; // 48px sur mobile
+	}
+}

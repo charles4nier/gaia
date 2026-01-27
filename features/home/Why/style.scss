@@ -1,0 +1,51 @@
+.why {
+	padding: $spacing-5xl 0; // 80px - harmonisé avec les autres sections
+	background-color: $white;
+
+	&__title {
+		font-family: var(--font-inter), sans-serif;
+		font-size: 32px;
+		font-weight: 500; /* medium */
+		color: $black-primary;
+		margin-bottom: $title-margin-bottom;
+		position: relative;
+		padding-bottom: $spacing-md;
+		
+		// Trait vert sous le titre
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 48px;
+			height: 2px;
+			background: #3c6e3c;
+		}
+	}
+
+	&__description {
+		font-family: var(--font-inter), sans-serif;
+		font-size: 16px;
+		font-weight: 400; /* regular */
+		color: $black-primary;
+		line-height: 1.7;
+		margin-bottom: $content-gap-xl;
+	}
+
+	.button-contact {
+		display: inline-block;
+	}
+
+	@media (max-width: 768px) {
+		padding: $spacing-3xl 0; // 48px sur mobile
+
+		&__title {
+			font-size: 28px;
+			margin-bottom: $title-margin-bottom-mobile;
+		}
+
+		&__description {
+			margin-bottom: $content-gap-lg;
+		}
+	}
+}
