@@ -4,12 +4,12 @@
 	position: relative;
 
 	&__title {
-		font-family: var(--font-inter), sans-serif;
-		font-size: clamp(28px, 3vw, 36px);
-		font-weight: 500;
+		font-family: $font-family-primary;
+		font-size: $h2-size-desktop;
+		font-weight: $font-weight-medium;
 		color: $black-primary;
 		letter-spacing: -0.02em;
-		line-height: 1.2;
+		line-height: $line-height-tight;
 		margin-bottom: $spacing-4xl; // 64px
 		text-align: left;
 		position: relative;
@@ -23,7 +23,7 @@
 			left: 0;
 			width: 48px;
 			height: 2px;
-			background: #3c6e3c;
+			background: $accent-green;
 		}
 	}
 
@@ -66,12 +66,38 @@
 		}
 	}
 
-	@media (max-width: 768px) {
+	/* --- Desktop moyen (≤ 1280px) --- */
+	@media (max-width: $breakpoint-lg) {
+		&__title {
+			font-size: $h2-size-lg;
+		}
+	}
+
+	/* --- Tablette (≤ 1024px) --- */
+	@media (max-width: $breakpoint-md) {
+		&__title {
+			font-size: $h2-size-md;
+		}
+	}
+
+	/* --- Mobile (≤ 768px) --- */
+	@media (max-width: $breakpoint-sm) {
 		padding: $spacing-3xl 0;
+
+		&__title {
+			font-size: $h2-size-sm;
+		}
 
 		&__wrapper {
 			grid-template-columns: 1fr;
 			gap: $spacing-xl;
+		}
+	}
+
+	/* --- Petit Mobile (≤ 480px) --- */
+	@media (max-width: $breakpoint-xs) {
+		&__title {
+			font-size: $h2-size-xs;
 		}
 	}
 }

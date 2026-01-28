@@ -30,6 +30,16 @@ $shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
 $shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
 
 /* =========================
+   📱 Design System - Breakpoints
+   ========================= */
+
+$breakpoint-xs: 480px;        // Petit mobile
+$breakpoint-sm: 768px;        // Mobile / Tablette portrait
+$breakpoint-md: 1024px;       // Tablette paysage
+$breakpoint-lg: 1280px;       // Desktop moyen
+$breakpoint-xl: 1600px;       // Desktop large
+
+/* =========================
    📏 Design System - Spacing
    ========================= */
 
@@ -45,8 +55,9 @@ $spacing-4xl: 64px;  // 8x
 $spacing-5xl: 80px;  // 10x
 
 /* --- Padding sections (vertical) --- */
-$section-padding-y: $spacing-4xl;      // 64px
-$section-padding-y-mobile: $spacing-3xl; // 48px
+$section-padding-y-desktop: $spacing-5xl;      // 80px
+$section-padding-y-tablet: $spacing-4xl;      // 64px
+$section-padding-y-mobile: $spacing-3xl;       // 48px
 
 /* --- Espacements internes (entre éléments dans un container) --- */
 $content-gap-sm: $spacing-sm;   // 8px - entre éléments proches
@@ -55,23 +66,88 @@ $content-gap-lg: $spacing-lg;   // 24px - entre groupes d'éléments
 $content-gap-xl: $spacing-xl;   // 32px - entre sections internes
 
 /* --- Marges de titres --- */
-$title-margin-bottom: $spacing-xl;        // 32px
-$title-margin-bottom-mobile: $spacing-lg; // 24px
+$title-margin-bottom-desktop: $spacing-xl;        // 32px
+$title-margin-bottom-tablet: $spacing-lg;         // 24px
+$title-margin-bottom-mobile: $spacing-md;         // 16px
 
-/* --- Padding container interne (réduit pour éviter doublon avec section) --- */
-$container-padding-y: $spacing-2xl;      // 40px (déjà défini dans .container)
-$container-padding-y-mobile: $spacing-lg; // 24px
+/* --- Padding container interne --- */
+$container-padding-y-desktop: $spacing-2xl;      // 40px
+$container-padding-y-tablet: $spacing-xl;       // 32px
+$container-padding-y-mobile: $spacing-lg;        // 24px
 
 /* =========================
-   📝 Design System - Typography Hierarchy
+   📐 Design System - Container Max Widths
    ========================= */
 
-/* --- Tailles de texte hiérarchiques --- */
-$text-size-level-1: 18px;  // Texte principal secondaire (tagline, intro important)
-$text-size-level-2: 16px;  // Texte standard (body)
-$text-size-level-3: 14px;  // Texte secondaire (description, sous-titres)
+$container-max-width-desktop: 1600px;
+$container-max-width-tablet: 100%;
+$container-max-width-mobile: 100%;
 
-/* --- Mobile --- */
+/* --- Padding horizontal container --- */
+$container-padding-x-desktop: $spacing-5xl;      // 80px
+$container-padding-x-tablet: $spacing-2xl;      // 40px
+$container-padding-x-mobile: $spacing-xl;       // 32px
+$container-padding-x-xs: $spacing-md;            // 16px
+
+/* =========================
+   📝 Design System - Typography
+   ========================= */
+
+/* --- Font Family --- */
+$font-family-primary: var(--font-inter), sans-serif;
+
+/* --- Font Weights --- */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* --- Line Heights --- */
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 1.7;
+
+/* --- Desktop Typography (> 1280px) --- */
+$h1-size-desktop: clamp(32px, 3.5vw, 40px);  // 32-40px
+$h2-size-desktop: clamp(20px, 2.5vw, 28px);  // 20-28px
+$h3-size-desktop: clamp(18px, 2vw, 22px);    // 18-22px
+$body-size-desktop: 16px;
+$small-size-desktop: 14px;
+
+/* --- Desktop moyen Typography (≤ 1280px) --- */
+$h1-size-lg: clamp(30px, 3vw, 36px);         // 30-36px
+$h2-size-lg: clamp(20px, 2.3vw, 26px);       // 20-26px
+$h3-size-lg: clamp(17px, 1.8vw, 20px);      // 17-20px
+$body-size-lg: 15px;
+$small-size-lg: 13px;
+
+/* --- Tablette Typography (≤ 1024px) --- */
+$h1-size-md: clamp(30px, 4vw, 32px);         // 28-32px
+$h2-size-md: clamp(20px, 2.5vw, 24px);       // 20-24px
+$h3-size-md: clamp(16px, 2vw, 18px);         // 16-18px
+$body-size-md: 15px;
+$small-size-md: 13px;
+
+/* --- Mobile Typography (≤ 768px) --- */
+$h1-size-sm: clamp(30px, 4.5vw, 30px);       // 24-30px
+$h2-size-sm: clamp(20px, 3vw, 22px);         // 20-22px
+$h3-size-sm: clamp(15px, 2.5vw, 17px);       // 15-17px
+$body-size-sm: 15px;
+$small-size-sm: 13px;
+
+/* --- Petit Mobile Typography (≤ 480px) --- */
+$h1-size-xs: clamp(30px, 5vw, 28px);         // 22-28px
+$h2-size-xs: clamp(20px, 3.5vw, 20px);       // 20px fixe
+$h3-size-xs: clamp(14px, 3vw, 16px);         // 14-16px
+$body-size-xs: 14px;
+$small-size-xs: 12px;
+
+/* --- Tailles de texte hiérarchiques (classes utilitaires) --- */
+$text-size-level-1-desktop: 18px;
+$text-size-level-2-desktop: 16px;
+$text-size-level-3-desktop: 14px;
+
 $text-size-level-1-mobile: 16px;
 $text-size-level-2-mobile: 15px;
 $text-size-level-3-mobile: 13px;

@@ -44,11 +44,11 @@
 	}
 
 	&__title {
-		font-family: var(--font-inter), sans-serif;
-		font-size: 42px;
-		font-weight: 500;
+		font-family: $font-family-primary;
+		font-size: $h1-size-desktop;
+		font-weight: $font-weight-medium;
 		color: $black-primary;
-		line-height: 1.2;
+		line-height: $line-height-tight;
 		margin: 0;
 	}
 
@@ -96,19 +96,19 @@
 		object-fit: cover;
 	}
 
-	@media (max-width: 1280px) {
+	/* --- Desktop moyen (≤ 1280px) --- */
+	@media (max-width: $breakpoint-lg) {
 		&__text-column .container {
-			padding: 0 $spacing-4xl;
+			padding: 0 $container-padding-x-tablet;
+		}
+
+		&__title {
+			font-size: $h1-size-lg;
 		}
 	}
 
-	@media (max-width: 1100px) {
-		&__text-column .container {
-			padding: 0 $spacing-3xl;
-		}
-	}
-
-	@media (max-width: 1024px) {
+	/* --- Tablette (≤ 1024px) --- */
+	@media (max-width: $breakpoint-md) {
 		min-height: auto;
 
 		&__content {
@@ -117,7 +117,7 @@
 		}
 
 		&__text-column .container {
-			padding: 0 $spacing-2xl;
+			padding: 0 $container-padding-x-tablet;
 		}
 
 		&__text-column {
@@ -126,6 +126,7 @@
 		}
 
 		&__title {
+			font-size: $h1-size-md;
 			max-width: 100%;
 		}
 
@@ -146,12 +147,36 @@
 	}
 
 	@media (max-width: 768px) {
-		&__text-column .container {
-			padding: 0 $spacing-xl;
+		position: relative;
+		padding: 0;
+		margin-top: 0;
+		background-color: $white;
+
+		&__content {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		&__text-column {
-			padding: $spacing-3xl 0;
+			position: relative;
+			width: 100%;
+			padding: 0;
+			max-width: 100%;
+
+			.container {
+				padding: 0 $container-padding-x-mobile;
+			}
+		}
+
+		&__text-box {
+			background-color: $white;
+			padding: $spacing-2xl $container-padding-x-mobile;
+			margin-bottom: 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
 		}
 
 		&__text {
@@ -160,15 +185,15 @@
 
 		&__title {
 			max-width: 100%;
+			font-size: $h1-size-sm;
 		}
 
-
 		&__image-column {
-			min-height: 300px;
+			display: none;
 		}
 
 		&__image-wrapper {
-			min-height: 300px;
+			display: none;
 		}
 
 		&__ui-container {
@@ -183,9 +208,20 @@
 		}
 	}
 
-	@media (max-width: 480px) {
-		&__text-column .container {
-			padding: 0 $spacing-md;
+	/* --- Petit Mobile (≤ 480px) --- */
+	@media (max-width: $breakpoint-xs) {
+		&__text-column {
+			.container {
+				padding: 0 $container-padding-x-xs;
+			}
+		}
+
+		&__text-box {
+			padding: $spacing-xl 0;
+		}
+
+		&__title {
+			font-size: $h1-size-xs;
 		}
 	}
 }

@@ -29,7 +29,7 @@ body {
 
 body {
 	width: 100%;
-	line-height: 1.5;
+	line-height: $line-height-normal;
 	padding-top: 60px;
 	padding-bottom: 400px;
 	background-color: $black-primary;
@@ -37,6 +37,11 @@ body {
 
 	> * {
 		pointer-events: auto;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		padding-top: 60px;
+		padding-bottom: 653px;
 	}
 }
 
@@ -70,31 +75,41 @@ ol {
 	list-style: none;
 }
 
+/* =========================
+   📝 Typography Base Styles
+   ========================= */
+
 h1,
 h2,
 h3 {
-	font-family: var(--font-inter), sans-serif;
+	font-family: $font-family-primary;
+	font-weight: $font-weight-medium;
+	line-height: $line-height-tight;
+	color: $black-primary;
 }
 
 h1 {
-	font-weight: 500;
+	font-size: $h1-size-desktop;
+	font-weight: $font-weight-medium;
 }
 
 h2 {
-	font-weight: 500;
-	font-size: 30px;
-	margin-bottom: 20px;
+	font-size: $h2-size-desktop;
+	font-weight: $font-weight-medium;
+	margin-bottom: $title-margin-bottom-desktop;
 }
 
 h3 {
-	font-weight: 500;
+	font-size: $h3-size-desktop;
+	font-weight: $font-weight-medium;
 }
 
 p {
 	color: $black-primary;
-	font-family: var(--font-inter), sans-serif;
-	font-size: 16px;
-	font-weight: 400; /* regular */
+	font-family: $font-family-primary;
+	font-size: $body-size-desktop;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-relaxed;
 }
 
 /* =========================
@@ -102,58 +117,44 @@ p {
    ========================= */
 
 .text-level-1 {
-	font-family: var(--font-inter), sans-serif;
-	font-size: $text-size-level-1;
-	font-weight: 400;
+	font-family: $font-family-primary;
+	font-size: $text-size-level-1-desktop;
+	font-weight: $font-weight-regular;
 	color: $black-primary;
-	line-height: 1.6;
+	line-height: $line-height-relaxed;
 	margin: 0;
 }
 
 .text-level-2 {
-	font-family: var(--font-inter), sans-serif;
-	font-size: $text-size-level-2;
-	font-weight: 400;
+	font-family: $font-family-primary;
+	font-size: $text-size-level-2-desktop;
+	font-weight: $font-weight-regular;
 	color: $black-primary;
-	line-height: 1.7;
+	line-height: $line-height-loose;
 	margin: 0;
 }
 
 .text-level-3 {
-	font-family: var(--font-inter), sans-serif;
-	font-size: $text-size-level-3;
-	font-weight: 400;
+	font-family: $font-family-primary;
+	font-size: $text-size-level-3-desktop;
+	font-weight: $font-weight-regular;
 	color: $black-primary;
-	line-height: 1.6;
+	line-height: $line-height-relaxed;
 	margin: 0;
-}
-
-@media (max-width: 768px) {
-	.text-level-1 {
-		font-size: $text-size-level-1-mobile;
-	}
-
-	.text-level-2 {
-		font-size: $text-size-level-2-mobile;
-	}
-
-	.text-level-3 {
-		font-size: $text-size-level-3-mobile;
-	}
 }
 
 button,
 a,
 caption,
 li {
-	font-family: var(--font-inter), sans-serif;
-	font-size: 16px;
-	font-weight: 500; /* medium */
+	font-family: $font-family-primary;
+	font-size: $body-size-desktop;
+	font-weight: $font-weight-medium;
 }
 
 button,
 a {
-	font-weight: 500; /* medium */
+	font-weight: $font-weight-medium;
 	background: none;
 	padding: 14px 20px;
 	border: 1px solid transparent;
@@ -161,10 +162,14 @@ a {
 	cursor: pointer;
 }
 
+/* =========================
+   📦 Container
+   ========================= */
+
 .container {
 	width: 100%;
-	max-width: 1600px;
-	padding: 0 $spacing-5xl;
+	max-width: $container-max-width-desktop;
+	padding: 0 $container-padding-x-desktop;
 	margin: 0 auto;
 }
 
@@ -172,18 +177,22 @@ a {
 	border-radius: 9px;
 }
 
+/* =========================
+   🔘 Buttons
+   ========================= */
+
 .button-primary {
 	display: inline-block;
 	background-color: $accent-green;
 	color: $white;
 	padding: 14px 28px;
 	border-radius: 2px;
-	font-weight: 500; /* medium */
+	font-weight: $font-weight-medium;
 	text-align: center;
 	transition: background-color 0.3s ease;
 
 	&:hover {
-		background-color:$accent-green-dark;
+		background-color: $accent-green-dark;
 	}
 }
 
@@ -205,7 +214,7 @@ a {
 	border: 2px solid $black-primary;
 	padding: 12px 26px;
 	border-radius: 2px;
-	font-weight: 500; /* medium */
+	font-weight: $font-weight-medium;
 	text-align: center;
 	transition: background-color 0.3s ease, color 0.3s ease;
 
@@ -221,12 +230,12 @@ a {
 	color: $white;
 	padding: 14px 28px;
 	border-radius: 2px;
-	font-weight: 500; /* medium */
+	font-weight: $font-weight-medium;
 	text-align: center;
 	transition: background-color 0.3s ease;
 
 	&:hover {
-		background-color:$accent-green-dark;
+		background-color: $accent-green-dark;
 	}
 }
 
@@ -234,57 +243,147 @@ a {
    📱 Breakpoints Responsive
    ========================= */
 
-@media (max-width: 1280px) {
+/* --- Desktop moyen (≤ 1280px) --- */
+@media (max-width: $breakpoint-lg) {
 	.container {
-		padding: 0 $spacing-4xl;
+		max-width: $container-max-width-tablet;
+		padding: 0 $container-padding-x-tablet;
 	}
-}
 
-@media (max-width: 1100px) {
-	.container {
-		max-width: 100%;
-		padding: 0 $spacing-3xl;
-	}
-}
-
-@media (max-width: 1024px) {
-	.container {
-		padding: 0 $spacing-2xl;
+	h1 {
+		font-size: $h1-size-lg;
 	}
 
 	h2 {
-		font-size: 28px;
+		font-size: $h2-size-lg;
+		margin-bottom: $title-margin-bottom-tablet;
+	}
+
+	h3 {
+		font-size: $h3-size-lg;
+	}
+
+	p {
+		font-size: $body-size-lg;
+	}
+
+	.text-level-1 {
+		font-size: $text-size-level-1-mobile;
+	}
+
+	.text-level-2 {
+		font-size: $text-size-level-2-mobile;
+	}
+
+	.text-level-3 {
+		font-size: $text-size-level-3-mobile;
+	}
+
+	button,
+	a,
+	caption,
+	li {
+		font-size: $body-size-lg;
 	}
 }
 
-@media (max-width: 768px) {
-	body {
-		padding-top: 70px;
-		padding-bottom: 653px;
+/* --- Tablette (≤ 1024px) --- */
+@media (max-width: $breakpoint-md) {
+	.container {
+		padding: 0 $container-padding-x-tablet;
 	}
 
-	.container {
-		padding: 0 $spacing-xl;
+	h1 {
+		font-size: $h1-size-md;
 	}
 
 	h2 {
-		font-size: 26px;
+		font-size: $h2-size-md;
+		margin-bottom: $title-margin-bottom-tablet;
+	}
+
+	h3 {
+		font-size: $h3-size-md;
+	}
+
+	p {
+		font-size: $body-size-md;
+	}
+
+	button,
+	a,
+	caption,
+	li {
+		font-size: $body-size-md;
 	}
 }
 
-@media (max-width: 480px) {
+/* --- Mobile (≤ 768px) --- */
+@media (max-width: $breakpoint-sm) {
 	.container {
-		padding: 0 $spacing-md;
+		max-width: $container-max-width-mobile;
+		padding: 0 $container-padding-x-mobile;
+	}
+
+	h1 {
+		font-size: $h1-size-sm;
 	}
 
 	h2 {
-		font-size: 24px;
-		margin-bottom: 15px;
+		font-size: $h2-size-sm;
+		margin-bottom: $title-margin-bottom-mobile;
+	}
+
+	h3 {
+		font-size: $h3-size-sm;
+	}
+
+	p {
+		font-size: $body-size-sm;
+	}
+
+	.text-level-1 {
+		font-size: $text-size-level-1-mobile;
+	}
+
+	.text-level-2 {
+		font-size: $text-size-level-2-mobile;
+	}
+
+	.text-level-3 {
+		font-size: $text-size-level-3-mobile;
+	}
+
+	button,
+	a,
+	caption,
+	li {
+		font-size: $body-size-sm;
+	}
+}
+
+/* --- Petit Mobile (≤ 480px) --- */
+@media (max-width: $breakpoint-xs) {
+	.container {
+		padding: 0 $container-padding-x-xs;
+	}
+
+	h1 {
+		font-size: $h1-size-xs;
+	}
+
+	h2 {
+		font-size: $h2-size-xs;
+		margin-bottom: $title-margin-bottom-mobile;
+	}
+
+	h3 {
+		font-size: $h3-size-xs;
 	}
 
 	p,
 	button,
 	a {
-		font-size: 15px;
+		font-size: $body-size-xs;
 	}
 }
