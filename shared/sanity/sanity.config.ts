@@ -1,14 +1,16 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
+// Imports relatifs nécessaires car Sanity Studio (Vite) ne reconnaît pas les alias TypeScript
 import home from '../../features/home/home.schema';
+import offres from '../../features/offres/offres.schema';
 
 export default defineConfig({
 	name: 'default',
 	title: 'GAIA Studio',
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+	projectId: 'qjikpaof',
+	dataset: 'production',
 	plugins: [deskTool()],
 	schema: {
-		types: [home]
+		types: [home, offres]
 	}
 });

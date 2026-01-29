@@ -1,0 +1,49 @@
+.hero {
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing-3xl;
+		width: 100%;
+	}
+
+	&__title {
+		font-family: $font-family-primary;
+		font-size: $h1-size-desktop;
+		font-weight: $font-weight-medium;
+		color: $black-primary;
+		line-height: $line-height-tight;
+		margin: 0;
+	}
+
+	&__description {
+		color: $black-secondary;
+	}
+
+	/* --- Desktop moyen (≤ 1280px) --- */
+	@media (max-width: $breakpoint-lg) {
+		&__title {
+			font-size: $h1-size-lg;
+		}
+	}
+
+	/* --- Tablette (≤ 1024px) --- */
+	@media (max-width: $breakpoint-md) {
+		&__title {
+			font-size: $h1-size-md;
+		}
+	}
+
+	/* --- Mobile (≤ 768px) --- */
+	@media (max-width: $breakpoint-sm) {
+		&__title {
+			font-size: $h1-size-sm;
+		}
+	}
+
+	/* --- Petit Mobile (≤ 480px) --- */
+	@media (max-width: $breakpoint-xs) {
+		&__title {
+			font-size: $h1-size-xs;
+		}
+	}
+}

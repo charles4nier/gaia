@@ -240,6 +240,26 @@ a {
 }
 
 /* =========================
+   🎴 Encadrés flottants (Floating Cards)
+   ========================= */
+
+.floating-card {
+	padding: $spacing-2xl;
+	border-radius: 8px;
+	border: 1px solid rgba(60, 110, 60, 0.08);
+	box-shadow: $shadow-floating-card;
+	background: $white-secondary; // Fond gris (comme bouton contact header)
+}
+
+.floating-card-green {
+	padding: $spacing-3xl;
+	border-radius: 0;
+	border: 1px solid rgba(60, 110, 60, 0.15);
+	box-shadow: $shadow-floating-card;
+	background: #eef4ea; // Fond vert pâle
+}
+
+/* =========================
    📱 Breakpoints Responsive
    ========================= */
 

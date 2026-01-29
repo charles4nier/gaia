@@ -34,9 +34,11 @@
 				}
 
 				&__wrapper {
-					background: rgba(0, 0, 0, 0.03);
+					background: $white-secondary;
 					padding: $spacing-2xl;
 					border-radius: 8px;
+					border: 1px solid rgba(0, 0, 0, 0.08);
+					box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 					text-align: center;
 					margin-top: $spacing-4xl; // Espacement après le titre
 				}
