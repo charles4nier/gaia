@@ -11,7 +11,7 @@ const CLASS_NAME = 'header';
 const navLinks = [
 	{ name: 'Accueil', path: '/' },
 	{ name: 'Offres', path: '/offres' },
-	{ name: 'Formation', path: '/formation' },
+	{ name: 'Formations', path: '/formations' },
 	{ name: 'À propos', path: '/a-propos' }
 ];
 
