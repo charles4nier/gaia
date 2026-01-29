@@ -202,11 +202,16 @@
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: 999;
-		animation: fadeIn 0.3s ease-out;
 		cursor: pointer;
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+
+		&.open {
+			opacity: 1;
+		}
 
 		&.closing {
-			animation: fadeOut 0.3s ease-out;
+			opacity: 0;
 		}
 	}
 
@@ -221,10 +226,15 @@
 		box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
 		z-index: 1001;
 		overflow-y: auto;
-		animation: slideInRight 0.3s ease-out;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-out;
+
+		&.open {
+			transform: translateX(0);
+		}
 
 		&.closing {
-			animation: slideOutRight 0.3s ease-out;
+			transform: translateX(100%);
 		}
 
 		ul {
@@ -236,18 +246,20 @@
 
 			li {
 				opacity: 0;
-				animation: fadeInRight 0.4s ease-out forwards;
-
-				&:nth-child(1) {
-					animation-delay: 0.1s;
-				}
-				&:nth-child(2) {
-					animation-delay: 0.15s;
-				}
-				&:nth-child(3) {
-					animation-delay: 0.2s;
-				}
+				transform: translateX(20px);
+				transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 			}
+		}
+
+		&.open ul li {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		&.closing ul li {
+			opacity: 0;
+			transform: translateX(20px);
+			transition-delay: 0s;
 		}
 
 		.header__link {

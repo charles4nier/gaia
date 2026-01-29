@@ -3,6 +3,7 @@ import { deskTool } from 'sanity/desk';
 // Imports relatifs nécessaires car Sanity Studio (Vite) ne reconnaît pas les alias TypeScript
 import home from '../../features/home/home.schema';
 import offres from '../../features/offres/offres.schema';
+import formations from '../../features/formations/formations.schema';
 
 export default defineConfig({
 	name: 'default',
@@ -11,6 +12,6 @@ export default defineConfig({
 	dataset: 'production',
 	plugins: [deskTool()],
 	schema: {
-		types: [home, offres]
+		types: [home, offres, formations]
 	}
 });

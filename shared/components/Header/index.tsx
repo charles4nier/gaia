@@ -195,34 +195,36 @@ export default function Header() {
 				</button>
 			</div>
 
-			{isOpen && (
-				<>
-					<div
-						className={`${CLASS_NAME}__overlay ${isClosing ? 'closing' : ''}`}
-						onClick={handleClose}
-					/>
-					<nav
-						className={`${CLASS_NAME}__mobile ${isClosing ? 'closing' : ''}`}
-					>
-						<ul>
-							{navLinks.map((link) => (
-								<li key={link.path}>
-									<Link
-										href={link.path}
-										className={
-											isActive(link.path)
-												? `${CLASS_NAME}__link active`
-												: `${CLASS_NAME}__link`
-										}
-									>
-										{link.name}
-									</Link>
-								</li>
-							))}
-						</ul>
-					</nav>
-				</>
-			)}
+		<>
+			<div
+				className={`${CLASS_NAME}__overlay ${isOpen && !isClosing ? 'open' : ''} ${isClosing ? 'closing' : ''}`}
+				onClick={handleClose}
+				style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+			/>
+			<nav
+				className={`${CLASS_NAME}__mobile ${isOpen && !isClosing ? 'open' : ''} ${isClosing ? 'closing' : ''}`}
+			>
+				<ul>
+					{navLinks.map((link, index) => (
+						<li 
+							key={link.path}
+							style={{ transitionDelay: isOpen && !isClosing ? `${0.1 + index * 0.05}s` : '0s' }}
+						>
+							<Link
+								href={link.path}
+								className={
+									isActive(link.path)
+										? `${CLASS_NAME}__link active`
+										: `${CLASS_NAME}__link`
+								}
+							>
+								{link.name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</nav>
+		</>
 		</header>
 	);
 }
