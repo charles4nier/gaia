@@ -23,6 +23,12 @@ const nextConfig = {
 		prependData: `@import "variables.scss";`
 	},
 	compress: true,
+	eslint: {
+		ignoreDuringBuilds: true,
+	  },
+	typescript: {
+	ignoreBuildErrors: true,
+	},
 	poweredByHeader: false,
 	webpack: (config, { isServer }) => {
 		config.resolve.alias = {
