@@ -3,16 +3,17 @@
    ========================= */
 
 /* --- Couleurs principales --- */
-$black: #1a1a1a;
-$black-primary: #2d2926;
-$black-secondary: #5b554f;
+$black: #1e1f22;
+$black-primary: #1e1f22;
+$black-secondary: #4c4f55;
+$black-tertiary: #d6d6d6;
 
 $white: #ffffff;
-$white-secondary: #f3f1ed;
-$white-tertiary: #faf8f6;
+$white-secondary: #F9FAFB;
+$white-tertiary: #fcfcfa;
 
-$accent-green: #3a6b2a; // Vert GAIA
-$accent-green-dark: #254312; // Nuance plus claire pour hover
+$accent-green: #2e6b4f; // Vert GAIA
+$accent-green-dark: #1f3f2f; // Nuance plus claire pour hover
 $accent-ocre: #b76b59;
 
 /* --- États et variations --- */
@@ -56,9 +57,9 @@ $spacing-4xl: 64px;  // 8x
 $spacing-5xl: 80px;  // 10x
 
 /* --- Padding sections (vertical) --- */
-$section-padding-y-desktop: $spacing-5xl;      // 80px
-$section-padding-y-tablet: $spacing-4xl;      // 64px
-$section-padding-y-mobile: $spacing-3xl;       // 48px
+$section-padding-y-desktop: $spacing-4xl;      // 80px
+$section-padding-y-tablet: $spacing-3xl;      // 64px
+$section-padding-y-mobile: $spacing-2xl;       // 48px
 
 /* --- Espacements internes (entre éléments dans un container) --- */
 $content-gap-sm: $spacing-sm;   // 8px - entre éléments proches
@@ -80,12 +81,12 @@ $container-padding-y-mobile: $spacing-lg;        // 24px
    📐 Design System - Container Max Widths
    ========================= */
 
-$container-max-width-desktop: 1600px;
+$container-max-width-desktop: 1400px;
 $container-max-width-tablet: 100%;
 $container-max-width-mobile: 100%;
 
 /* --- Padding horizontal container --- */
-$container-padding-x-desktop: $spacing-5xl;      // 80px
+$container-padding-x-desktop: $spacing-4xl;      // 60px
 $container-padding-x-tablet: $spacing-2xl;      // 40px
 $container-padding-x-mobile: $spacing-xl;       // 32px
 $container-padding-x-xs: $spacing-md;            // 16px

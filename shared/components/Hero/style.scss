@@ -1,14 +1,13 @@
 .hero {
 	position: relative;
-	min-height: 600px;
 	padding-top: 0;
-	background-color: $white;
+	background-color: $white-secondary;
 	overflow: hidden;
+	border-bottom: 1px solid $black-tertiary;
+
 
 	&__content {
 		display: flex;
-		justify-content: flex-end;
-		min-height: 600px;
 	}
 
 	&__text-column {

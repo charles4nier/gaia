@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import './style.scss';
 
+import Link from 'next/link';
+
 interface FormationCardProps {
 	title: string;
 	duree?: string;
@@ -66,6 +68,7 @@ export default function FormationCard({
 						<p className="formation-card__field-value">{methodologie}</p>
 					</div>
 				)}
+				<Link href={`/contact`} className="button-primary">S'inscrire</Link>
 			</div>
 		</div>
 	);

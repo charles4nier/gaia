@@ -6,13 +6,17 @@
 	z-index: 10000;
 	background: $white;
 	color: $black-primary;
-	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+	// box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid $black-tertiary;
 	transition:
 		box-shadow 0.3s ease,
 		background 0.3s ease;
 	height: 60px;
 	display: flex;
 	align-items: center;
+	background-color: rgb(255 255 255 / .75) !important;
+    backdrop-filter: saturate(180%) blur(20px);
+
 
 	&::after {
 		content: '';
@@ -37,22 +41,12 @@
 		}
 		}
 
-	.header__contact-button {
-		background-color: $white-secondary;
-		color: $black-primary;
+	.header__logo {
+		padding: 0;
 
-		&:hover {
-			background-color: $white;
-			color: $accent-green;
-
-			svg {
-				transform: translateX(4px);
-			}
+		svg {
+			filter: none;
 		}
-	}
-
-	.header__logo svg {
-		filter: none;
 	}
 
 	.header__burger span {

@@ -1,46 +1,21 @@
 .hero {
 	position: relative;
-	min-height: 600px;
 	padding-top: 0;
-	background-color: $white;
+	background-color: $white-secondary;
 	overflow: hidden;
+	border-bottom: 1px solid $black-tertiary;
 
 	&__content {
 		display: flex;
-		justify-content: flex-end;
-		min-height: 600px;
 	}
 
-	&__text-column {
-		display: flex;
-		align-items: center;
-		padding: calc(60px + $spacing-5xl) 0 $spacing-5xl 0;
-		position: relative;
-		z-index: 2;
-		width: 100%;
-		max-width: 800px;
-
-		.container {
-			max-width: 1600px;
-			width: 100%;
-			padding: 0 $spacing-5xl;
-			margin: 0 auto;
-		}
-	}
-
-	&__text-box {
-		background-color: $white;
-		padding: 0;
-		border-radius: 0;
-		width: 100%;
-		margin-left: 0;
-	}
-
+	
 	&__text {
 		display: flex;
 		flex-direction: column;
-		gap: $spacing-3xl;
-		width: 100%;
+		gap: $spacing-md;
+		width: 55%;
+		padding: $spacing-5xl 0;
 	}
 
 	&__title {

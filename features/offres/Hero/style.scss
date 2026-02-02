@@ -2,8 +2,9 @@
 	&__text {
 		display: flex;
 		flex-direction: column;
-		gap: $spacing-3xl;
-		width: 100%;
+		gap: $spacing-md;
+		width: 55%;
+		padding: $spacing-5xl 0;
 	}
 
 	&__title {

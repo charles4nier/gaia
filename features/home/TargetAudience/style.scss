@@ -9,18 +9,23 @@
 	.container {
 		position: relative;
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	&__title {
+		width: fit-content;
 		font-family: $font-family-primary;
 		font-size: $h2-size-desktop;
 		font-weight: $font-weight-medium;
 		color: $black-primary;
 		letter-spacing: -0.02em; // Légère compression pour élégance
 		line-height: $line-height-tight;
-		margin-bottom: $title-margin-bottom-desktop;
+		margin: 0 auto $title-margin-bottom-desktop;
 		position: relative;
 		padding-bottom: $spacing-md;
+		text-align: center;
 		
 		// Trait vert sous le titre
 		&::after {
@@ -35,21 +40,23 @@
 	}
 
 	&__intro {
+		text-align: center;
 		font-size: clamp(15px, 1.5vw, 18px);
 		font-weight: 400;
 		line-height: 1.75; // Légèrement augmenté pour meilleure lisibilité
 		letter-spacing: 0.01em;
 		color: $black-secondary;
-		margin-bottom: $spacing-5xl; // 80px - espacement encore plus généreux avant les cartes
+		margin: 0 auto $spacing-5xl; // 80px - espacement encore plus généreux avant les cartes
 		max-width: 68ch; // Légèrement augmenté pour meilleure lisibilité
 	}
 
 	&__list {
-		margin-bottom: $spacing-5xl; // 80px - espacement généreux avant conclusion
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: $spacing-xl; // 32px - gap généreux entre cartes
 		align-items: stretch;
+		margin: 0 auto $spacing-5xl;
+
 
 		li {
 			display: flex;

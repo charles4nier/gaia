@@ -1,4 +1,5 @@
 import './style.scss';
+import Link from 'next/link';
 
 export default function TargetAudience() {
 	const title = "À qui s'adresse GAIA?";
@@ -32,6 +33,9 @@ export default function TargetAudience() {
 						</li>
 					))}
 				</ul>
+				<Link href="/offres" className="button-tertiary">
+					Découvrir les offres
+				</Link>
 			</div>
 		</section>
 	);

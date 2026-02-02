@@ -50,39 +50,42 @@
 	}
 
 	&__modalites-box {
-		background: $white-secondary;
+		background: $black-primary;
 		padding: $spacing-3xl;
 		border-radius: 8px;
-		border: 1px solid rgba(60, 110, 60, 0.08);
+		border: none;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 		position: relative;
 		padding-left: $spacing-4xl;
+		overflow: hidden;
 
-		// Trait vert sur le côté gauche
-		&::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			bottom: 0;
-			width: 4px;
-			background: $accent-green;
-			border-radius: 0 2px 2px 0;
-		}
+		
 	}
 
 	&__modalites-title {
+		position: relative;
 		font-family: $font-family-primary;
 		font-size: clamp(17px, 1.4vw, 21px);
 		font-weight: 600;
 		line-height: 1.35;
 		letter-spacing: -0.015em;
-		color: $black-primary;
+		color: $white;
 		margin: 0 0 $spacing-lg 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -10px;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background: $accent-green;
+			border-radius: 0 2px 2px 0;
+		}
 	}
 
 	&__modalites-text {
-		color: $black-secondary;
+		color: $white;
 		line-height: $line-height-relaxed;
 		margin: 0;
 		white-space: pre-line;
