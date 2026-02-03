@@ -10,7 +10,7 @@ export default function Why() {
 		"Les systèmes de management proposés sont utiles, cohérents et applicables, sans sur-normer ni complexifier inutilement les pratiques existantes."
 	];
 	const ctaIntro = "Contactez GAIA pour échanger sur vos enjeux et définir un accompagnement adapté.";
-	const buttonLabel = "Contacter GAIA";
+	const buttonLabel = "Parlons de votre projet";
 
 	return (
 		<section className="why">
