@@ -25,10 +25,10 @@ export default function Hero() {
 						</Link>
 					</div>
 				</div>
-				{/* <div className="hero__image-column">
+				<div className="hero__image-column">
 					<div className="hero__image-wrapper">
 						<Image
-							src="/hero-image.png"
+							src="/hero-image-test.png"
 							alt="GAIA - Audit Conseil Formation"
 							fill
 							priority={true}
@@ -38,7 +38,7 @@ export default function Hero() {
 							className="hero__image"
 						/>
 					</div>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);
