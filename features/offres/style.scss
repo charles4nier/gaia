@@ -1,3 +1,8 @@
 .offres {
 	background-color: $white;
+
+	.hero__image-wrapper ,
+	.hero__image {
+		height: auto !important;
+	}
 }
