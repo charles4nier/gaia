@@ -93,10 +93,10 @@ export const siteConfig = {
 		'accompagnement organisation',
 
 		'auditeur iso 20121 france',
-'cabinet audit iso france',
-'consultant iso france',
-'accompagnement certification iso france',
-'audit epv france',
+		'cabinet audit iso france',
+		'consultant iso france',
+		'accompagnement certification iso france',
+		'audit epv france',
 	  ],
 };
 
