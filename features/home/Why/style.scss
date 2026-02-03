@@ -1,8 +1,7 @@
 .why {
 	padding: $section-padding-y-desktop 0;
 	background-color: $white;
-	border-top: 1px solid rgba(0, 0, 0, 0.06);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	border-bottom: $border;
 
 	&__title {
 		font-family: $font-family-primary;
@@ -44,11 +43,11 @@
 	}
 
 	&__cta-box {
-		background: $white-secondary;
+		background: $white;
 		padding: $spacing-3xl;
-		border-radius: 8px;
-		border: 1px solid rgba(60, 110, 60, 0.08);
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		border-radius: 4px;
+		border: $border-card;
+		box-shadow: $shadow-soft;
 		display: flex;
 		flex-direction: column;
 		gap: $spacing-xl;

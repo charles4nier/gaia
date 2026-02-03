@@ -1,8 +1,7 @@
 .offer-section {
 	padding: $section-padding-y-desktop 0;
 	background-color: $white;
-	border-top: 1px solid rgba(0, 0, 0, 0.06);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	border-top: $border;
 
 	&:first-of-type {
 		border-top: none;
@@ -63,10 +62,10 @@
 		flex-direction: column;
 		gap: $spacing-md;
 		padding: $spacing-2xl;
-		background: $white-secondary;
-		border: 1px solid rgba(60, 110, 60, 0.08);
-		border-radius: 8px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		background: $white;
+		border: $border-card;
+		border-radius: 4px;
+		box-shadow: $shadow-soft;
 	}
 
 	&__item-title {
@@ -111,12 +110,11 @@
 	}
 
 	&__cta {
-		background: $black-primary;
+		background: $white-secondary;
 		padding: $spacing-3xl;
 		border-radius: 0;
-		border: 1px solid rgba(60, 110, 60, 0.15);
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-		margin-top: $spacing-4xl;
+		border: $border;
+		margin-top: $spacing-4xl;	
 		max-width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -125,7 +123,7 @@
 	}
 
 	&__cta-intro {
-		color: $white;
+		color: $black-primary;
 		margin: 0;
 		max-width: 100%;
 	}

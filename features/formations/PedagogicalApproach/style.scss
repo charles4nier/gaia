@@ -4,7 +4,6 @@
 	padding: $section-padding-y-desktop 0;
 	background-color: $white;
 	border-top: none;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
 	&__title {
 		font-family: $font-family-primary;
@@ -50,16 +49,12 @@
 	}
 
 	&__modalites-box {
-		background: $black-primary;
+		background: $white-secondary;
 		padding: $spacing-3xl;
-		border-radius: 8px;
-		border: none;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 		position: relative;
 		padding-left: $spacing-4xl;
 		overflow: hidden;
-
-		
+		border: $border;
 	}
 
 	&__modalites-title {
@@ -69,7 +64,7 @@
 		font-weight: 600;
 		line-height: 1.35;
 		letter-spacing: -0.015em;
-		color: $white;
+		color: $black-primary;
 		margin: 0 0 $spacing-lg 0;
 
 		&::before {
@@ -85,7 +80,7 @@
 	}
 
 	&__modalites-text {
-		color: $white;
+		color: $black-secondary;
 		line-height: $line-height-relaxed;
 		margin: 0;
 		white-space: pre-line;

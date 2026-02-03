@@ -33,7 +33,7 @@ export default function TargetAudience() {
 						</li>
 					))}
 				</ul>
-				<Link href="/offres" className="button-tertiary">
+				<Link href="/offres" className="button-primary">
 					Découvrir les offres
 				</Link>
 			</div>

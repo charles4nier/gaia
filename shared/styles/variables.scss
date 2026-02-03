@@ -8,6 +8,8 @@ $black-primary: #1e1f22;
 $black-secondary: #4c4f55;
 $black-tertiary: #d6d6d6;
 
+$grey: #F3F6F8;
+
 $white: #ffffff;
 $white-secondary: #F9FAFB;
 $white-tertiary: #fcfcfa;
@@ -26,7 +28,7 @@ $gradient-green: linear-gradient(135deg, #254312, #3d7a5a);
 $gradient-ocre: linear-gradient(135deg, #b76b59, #8d4f43);
 
 /* --- Ombres & bordures --- */
-$shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+$shadow-soft: 0 2px 6px -1px rgb(0 0 0 / 6%), 0 1px 3px -2px rgb(0 0 0 / 6%);
 $shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
 $shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
 $shadow-floating-card: 0 4px 16px rgba(0, 0, 0, 0.08); // Ombre portée pour encadrés flottants
@@ -153,3 +155,6 @@ $text-size-level-3-desktop: 14px;
 $text-size-level-1-mobile: 16px;
 $text-size-level-2-mobile: 15px;
 $text-size-level-3-mobile: 13px;
+
+$border-card: 1px solid rgba(60, 110, 60, 0.08);
+$border: 1px solid rgba(60, 110, 60, 0.15)

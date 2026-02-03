@@ -3,8 +3,8 @@
 .formations-grid-section {
 	padding: $section-padding-y-desktop 0;
 	background-color: $white;
-	border-top: 1px solid rgba(0, 0, 0, 0.06);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	border-top: $border;
+	border-bottom: $border;
 
 	&__title {
 		font-family: $font-family-primary;
