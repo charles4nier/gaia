@@ -9,4 +9,20 @@
 		gap: $spacing-4xl;
 		padding: $spacing-5xl;
 	}
+
+	/* --- Tablette (≤ 1024px) --- */
+	@media (max-width: $breakpoint-md) {
+		&__theme-wrapper {
+			display: block;
+			padding: $spacing-2xl;
+		}
+
+	}
+
+	@media (max-width: 768px) {
+		&__theme-wrapper {
+			display: block;
+			padding: $spacing-xl;
+		}
+	}
 }
