@@ -7,8 +7,8 @@ export default function AProposHero() {
 			<div className="hero__text">
 				<h1 className="hero__title">GAIA – Audit · Conseil · Formation</h1>
 				<p className="hero__description text-level-2">
-					GAIA accompagne les organisations dans la construction et l'amélioration de systèmes de management
-					utiles, cohérents et adaptés à leurs réalités opérationnelles.
+					GAIA accompagne les organisations dans la construction et l’évolution de systèmes de management utiles, compris et réellement appliqués.<br/>
+					Notre objectif n’est pas de produire des dispositifs théoriques, mais de soutenir les pratiques existantes et les enjeux concrets des organisations, dans une logique d’amélioration continue.
 				</p>
 			</div>
 		</Hero>

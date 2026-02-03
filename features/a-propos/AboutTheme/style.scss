@@ -1,19 +1,7 @@
 @import '@shared/styles/variables';
 
-.about-section {
-	padding: $section-padding-y-desktop 0;
+.about-theme {
 	background-color: $white;
-	border-top: 1px solid rgba(0, 0, 0, 0.06);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-
-	&:first-of-type {
-		border-top: none;
-		padding-top: 0;
-	}
-
-	&:last-of-type {
-		border-bottom: none;
-	}
 
 	&__title {
 		font-family: $font-family-primary;
@@ -21,7 +9,7 @@
 		font-weight: $font-weight-medium;
 		color: $black-primary;
 		line-height: $line-height-tight;
-		margin-bottom: $title-margin-bottom-desktop;
+		margin-bottom: $spacing-md;
 		position: relative;
 		padding-bottom: $spacing-md;
 
@@ -46,6 +34,11 @@
 	&__description-block {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+
+		p {
+			margin-top: $spacing-md;
+		}
 	}
 
 	&__description {

@@ -2,4 +2,11 @@
 
 .about {
 	background-color: $white;
+
+	&__theme-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $spacing-4xl;
+		padding: $spacing-5xl;
+	}
 }
