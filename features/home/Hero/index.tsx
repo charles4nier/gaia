@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function() {
 	const title = "Construire des systèmes de management utiles, cohérents et réellement applicables au quotidien.";
 	const tagline = "Audit, conseil, accompagnement et formation en ISO, RSE, EPV et systèmes de management intégrés.";
-	const description = "GAIA accompagne les organisations dans la structuration, l'amélioration et le pilotage de systèmes de management adaptés à leurs réalités opérationnelles.";
+	const description = "GAIA accompagne les organisations dans la structuration, l'amélioration et le pilotage de systèmes de management adaptés à leurs réalités opérationnelles partout en France.";
 	const buttonOffersLabel = "Découvrir les offres";
 	const buttonContactLabel = "Parlons de votre projet";
 
