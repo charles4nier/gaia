@@ -1,23 +1,4 @@
 .hero {
-	position: relative;
-	padding-top: 0;
-	background-color: $white-secondary;
-	overflow: hidden;
-	border-bottom: 1px solid $black-tertiary;
-
-	&__content {
-		display: flex;
-	}
-
-	
-	&__text {
-		display: flex;
-		flex-direction: column;
-		gap: $spacing-md;
-		width: 50%;
-		padding: $spacing-5xl 0;
-	}
-
 	&__title {
 		font-family: $font-family-primary;
 		font-size: $h1-size-desktop;
@@ -42,40 +23,8 @@
 		flex-wrap: wrap;
 	}
 
-	&__image-column {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 50%;
-		height: auto;
-	}
-
-	&__image-wrapper {
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-
-		> span {
-			position: relative !important;
-			width: 100% !important;
-			height: 100% !important;
-			display: block !important;
-		}
-	}
-
-	&__image {
-		object-fit: cover;
-		height: 100% !important;
-	}
-
 	/* --- Desktop moyen (≤ 1280px) --- */
 	@media (max-width: $breakpoint-lg) {
-		&__text-column .container {
-			padding: 0 $container-padding-x-tablet;
-		}
 
 		&__title {
 			font-size: $h1-size-lg;
@@ -84,22 +33,6 @@
 
 	/* --- Tablette (≤ 1024px) --- */
 	@media (max-width: $breakpoint-md) {
-		min-height: auto;
-
-		&__content {
-			grid-template-columns: 1fr;
-			min-height: auto;
-		}
-
-		&__text-column .container {
-			padding: 0 $container-padding-x-tablet;
-		}
-
-		&__text-column {
-			order: 1;
-			padding: $spacing-4xl 0;
-		}
-
 		&__title {
 			font-size: $h1-size-md;
 			max-width: 100%;
@@ -109,67 +42,12 @@
 			max-width: 100%;
 		}
 
-		&__image-column {
-			order: 2;
-			min-height: 400px;
-		}
-
-		&__image-wrapper {
-			position: relative;
-			min-height: 400px;
-			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-		}
 	}
 
 	@media (max-width: 768px) {
-		position: relative;
-		padding: 0;
-		margin-top: 0;
-		background-color: $white;
-
-		&__content {
-			position: relative;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&__text-column {
-			position: relative;
-			width: 100%;
-			padding: 0;
-			max-width: 100%;
-
-			.container {
-				padding: 0 $container-padding-x-mobile;
-			}
-		}
-
-		&__text-box {
-			background-color: $white;
-			padding: $spacing-2xl $container-padding-x-mobile;
-			margin-bottom: 0;
-			width: 100%;
-			display: flex;
-			align-items: center;
-		}
-
-		&__text {
-			width: 100%;
-			gap: $spacing-2xl;
-		}
-
 		&__title {
 			max-width: 100%;
 			font-size: $h1-size-sm;
-		}
-
-		&__image-column {
-			display: none;
-		}
-
-		&__image-wrapper {
-			display: none;
 		}
 
 		&__ui-container {
@@ -186,16 +64,6 @@
 
 	/* --- Petit Mobile (≤ 480px) --- */
 	@media (max-width: $breakpoint-xs) {
-		&__text-column {
-			.container {
-				padding: 0 $container-padding-x-xs;
-			}
-		}
-
-		&__text-box {
-			padding: $spacing-xl 0;
-		}
-
 		&__title {
 			font-size: $h1-size-xs;
 		}

@@ -4,15 +4,15 @@ import type { ReactNode } from 'react';
 
 interface HeroProps {
 	children: ReactNode;
-	imageSrc?: string;
-	imageAlt?: string;
 }
 
-export default function Hero({ children, imageSrc = '/hero-image.png', imageAlt = 'GAIA' }: HeroProps) {
+export default function Hero({ children}: HeroProps) {
 	return (
 		<div className="hero">
 			<div className="hero__content container">
-				{children}
+				<div className="hero__text-column">
+					{children}
+				</div>
 				<div className="hero__image-column">
 					<div className="hero__image-wrapper">
 						<Image

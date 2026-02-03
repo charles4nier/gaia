@@ -1,12 +1,4 @@
 .hero {
-	&__text {
-		display: flex;
-		flex-direction: column;
-		gap: $spacing-md;
-		width: 55%;
-		padding: $spacing-5xl 0;
-	}
-
 	&__title {
 		font-family: $font-family-primary;
 		font-size: $h1-size-desktop;

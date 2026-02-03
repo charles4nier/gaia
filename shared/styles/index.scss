@@ -355,7 +355,7 @@ a {
 @media (max-width: $breakpoint-sm) {
 	.container {
 		max-width: $container-max-width-mobile;
-		padding: 0 $container-padding-x-mobile;
+		padding: 0 $spacing-lg;
 	}
 
 	h1 {
@@ -397,10 +397,6 @@ a {
 
 /* --- Petit Mobile (≤ 480px) --- */
 @media (max-width: $breakpoint-xs) {
-	.container {
-		padding: 0 $container-padding-x-xs;
-	}
-
 	h1 {
 		font-size: $h1-size-xs;
 	}

@@ -1,6 +1,6 @@
 .hero {
 	position: relative;
-	padding-top: 0;
+	padding: $spacing-5xl 0;
 	background-color: $white-secondary;
 	overflow: hidden;
 	border-bottom: 1px solid $black-tertiary;
@@ -10,8 +10,12 @@
 		display: flex;
 	}
 
-	&__text {
+	&__text-column {
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
+		width: 50%;
+		gap: $spacing-md;
 	}
 
 	&__image-column {
@@ -24,6 +28,10 @@
 	}
 
 	&__image-wrapper {
+		position: relative !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		top: 0;
 		right: 0;
 		width: 100%;
@@ -32,8 +40,11 @@
 	}
 
 	&__image {
-		object-fit: cover;
 		position: relative !important;
+		display: block;
+		width: 80% !important;
+		height: auto !important;
+		margin: 0 auto;
 	}
 
 	/* --- Desktop moyen (≤ 1280px) --- */
@@ -55,79 +66,46 @@
 		&__text-column .container {
 			padding: 0 $container-padding-x-tablet;
 		}
-
-		&__text-column {
-			order: 1;
-			padding: $spacing-4xl 0;
-		}
-
-		&__image-column {
-			order: 2;
-			min-height: 400px;
-		}
-
-		&__image-wrapper {
-			position: relative;
-			min-height: 400px;
-			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-		}
 	}
 
 	/* --- Mobile (≤ 768px) --- */
 	@media (max-width: $breakpoint-sm) {
 		position: relative;
-		min-height: 80vh;
 		padding: 0;
 		margin-top: 0;
 		background-color: $white;
+		padding: $spacing-3xl 0;
 
 		&__content {
 			position: relative;
-			min-height: 80vh;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-direction: column;
 		}
+
 
 		&__text-column {
 			position: relative;
 			width: 100%;
 			padding: 0;
 			max-width: 100%;
-
-			.container {
-				padding: 0 $container-padding-x-mobile;
-			}
-		}
-
-		&__text-box {
-			padding: $spacing-2xl $container-padding-x-mobile;
-			margin-bottom: 0;
-			width: 100%;
-			height: 80vh;
-			display: flex;
-			align-items: center;
+			order: 1;
 		}
 
 		&__image-column {
-			display: none;
+			order: 0;
+			width: 100%;
+			margin-bottom: $spacing-4xl;
 		}
 
 		&__image-wrapper {
-			display: none;
-		}
-	}
-
-	/* --- Petit Mobile (≤ 480px) --- */
-	@media (max-width: $breakpoint-xs) {
-		&__text-column {
-			.container {
-				padding: 0 $container-padding-x-xs;
-			}
+			width: 100%;
 		}
 
-		&__text-box {
-			padding: $spacing-xl $container-padding-x-xs;
+		&__image {
+			width:  100% !important;
 		}
+
 	}
 }

@@ -1,5 +1,5 @@
 .offer-section {
-	padding: $section-padding-y-desktop 0;
+	padding: $spacing-5xl 0;
 	background-color: $white;
 	border-top: $border;
 
@@ -163,7 +163,7 @@
 
 	/* --- Mobile (≤ 768px) --- */
 	@media (max-width: $breakpoint-sm) {
-		padding: $section-padding-y-mobile 0;
+		padding: $spacing-3xl 0;
 
 		&__title {
 			font-size: $h2-size-sm;
@@ -172,8 +172,8 @@
 
 		&__content-wrapper {
 			grid-template-columns: 1fr;
-			gap: $spacing-3xl;
-			margin-bottom: $spacing-3xl;
+			gap: $spacing-xl;
+			margin-bottom: $spacing-xl;
 		}
 
 		&__description {
@@ -193,7 +193,7 @@
 		}
 
 		&__cta {
-			margin-top: $spacing-4xl;
+			margin-top: 0;
 			padding-top: $spacing-3xl;
 		}
 
