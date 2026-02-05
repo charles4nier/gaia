@@ -26,13 +26,24 @@ body {
 	font: inherit;
 	color: inherit;
 }
-
+html {
+	background: linear-gradient(
+		to right,
+		#2D344F,
+		#5C7DB9,
+		#88C1ED
+	);
+}
 body {
 	width: 100%;
 	line-height: $line-height-normal;
-	padding-top: 60px;
 	padding-bottom: 327px;
-	background-color: $black-primary;
+	background: linear-gradient(
+		to right,
+		#2D344F,
+		#5C7DB9,
+		#88C1ED
+	);
 	pointer-events: none;
 
 	&:before {
@@ -195,16 +206,22 @@ a {
 	display: inline-block;
 	background-color: $accent-green;
 	color: $white;
-	padding: 8px 20px;
+	padding: 12px 20px;
 	border-radius: 2px;
 	font-weight: $font-weight-regular;
 	text-align: center;
-	transition: background-color 0.3s ease;
+	transition: all 0.3s ease;
 	line-height:29px;
 	font-size: $small-size-desktop;
+	transform: scale(1);
 	&:hover {
-		background-color: $accent-green-dark;
+		background-color: $accent-yellow;
+		box-shadow: $shadow-strong;
+		color: $black-primary;
+		transform: scale(1.1);
 	}
+	border-radius: 10px;
+	box-shadow: $shadow-soft;
 }
 
 .button-secondary {
@@ -223,8 +240,8 @@ a {
 	background-color: $white;
 	color: $black-primary;
 	border: 1px solid $black-primary;
-	padding: 8px 20px;
-	border-radius: 2px;
+	padding: 12px 20px;
+	border-radius: 10px;
 	font-weight: $font-weight-regular;
 	text-align: center;
 	transition: background-color 0.3s ease, color 0.3s ease;
@@ -232,8 +249,7 @@ a {
 	line-height:29px;
 
 	&:hover {
-		background-color: $black-primary;
-		color: $white;
+		color: $accent-pink;
 	}
 }
 

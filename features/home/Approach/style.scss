@@ -23,7 +23,7 @@
 			left: 0;
 			width: 48px;
 			height: 2px;
-			background: $accent-green;
+			background: $accent-pink;
 		}
 	}
 
@@ -95,10 +95,21 @@
 		svg {
 			width: 24px;
 			height: 24px;
-			color: #3c6e3c;
+			color: $white;
 			flex-shrink: 0;
 			margin-top: 2px;
 		}
+	}
+
+
+	&__icon { 
+		width: 40px;
+		height: 40px;
+		background: $accent-green;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__content {
@@ -121,7 +132,7 @@
 	&__divider {
 		width: 40px;
 		height: 2px;
-		background: linear-gradient(90deg, #3c6e3c 0%, rgba(60, 110, 60, 0.3) 100%);
+		background: $accent-pink;
 		margin: $spacing-xs 0; // 4px
 		border-radius: 1px;
 	}

@@ -1,6 +1,6 @@
 .target-audience {
 	padding: $spacing-5xl 0;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 244, 234, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+	background: $white-secondary;
 	position: relative;
 	overflow: hidden;
 
@@ -35,7 +35,7 @@
 			left: 0;
 			width: 48px;
 			height: 2px;
-			background: #3c6e3c;
+			background: $accent-pink;
 		}
 	}
 
@@ -57,7 +57,6 @@
 		align-items: stretch;
 		margin: 0 auto $spacing-4xl;
 
-
 		li {
 			display: flex;
 			flex-direction: column;
@@ -70,6 +69,7 @@
 			box-shadow: $shadow-soft;
 			height: 100%;
 			position: relative;
+			border-radius: 20px;
 		}
 	}
 
@@ -90,7 +90,7 @@
 		flex-shrink: 0;
 		width: 32px;
 		height: 2px;
-		background-color: $accent-green;
+		background-color: $accent-pink;
 		margin-top: 13px;
 	}
 
@@ -129,7 +129,7 @@
 			letter-spacing: 0.01em;
 			margin: 0;
 			padding-left: 24px;
-			border-left: 3px solid #3c6e3c;
+			border-left: 3px solid $accent-yellow;
 			
 			&::before {
 				content: '"';

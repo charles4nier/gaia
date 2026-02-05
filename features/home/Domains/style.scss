@@ -23,7 +23,7 @@
 			left: 0;
 			width: 48px;
 			height: 2px;
-			background: $accent-green;
+			background: $accent-pink;
 		}
 	}
 
@@ -33,7 +33,7 @@
 		align-items: center;
 		background: $white;
 		padding: $spacing-2xl;
-		border-radius: 4px;
+		border-radius: 20px;
 		border: $border-card;
 		box-shadow: $shadow-soft;
 		text-align: center;
@@ -66,7 +66,7 @@
 
 		&::before {
 			content: "•";
-			color: #3c6e3c;
+			color: $accent-yellow;
 			font-size: 1em;
 			font-weight: bold;
 			flex-shrink: 0;

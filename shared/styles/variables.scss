@@ -11,13 +11,16 @@ $black-tertiary: #d6d6d6;
 $grey: #F3F6F8;
 
 $white: #ffffff;
-$white-secondary: #F9FAFB;
+$white-secondary: #F6F6F6;
 $white-tertiary: #fcfcfa;
 
-$accent-green: #2e6b4f; // Vert GAIA
+$accent-green: #76d8c6;
+$accent-blue: #88C1ED;
+$accent-blue-dark: #2E3551;
 $accent-green-dark: #1f3f2f; // Nuance plus claire pour hover
 $accent-ocre: #b76b59;
-
+$accent-pink: #FA6EAD;
+$accent-yellow: #FBD456;
 /* --- États et variations --- */
 $success: $accent-green;
 $error: #d54c4c;
@@ -30,7 +33,7 @@ $gradient-ocre: linear-gradient(135deg, #b76b59, #8d4f43);
 /* --- Ombres & bordures --- */
 $shadow-soft: 0 2px 6px -1px rgb(0 0 0 / 6%), 0 1px 3px -2px rgb(0 0 0 / 6%);
 $shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.08);
-$shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
+$shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.25);
 $shadow-floating-card: 0 4px 16px rgba(0, 0, 0, 0.08); // Ombre portée pour encadrés flottants
 
 /* =========================

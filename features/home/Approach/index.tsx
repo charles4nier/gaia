@@ -52,7 +52,7 @@ export default function Approach() {
 			<ul className="approach-list">
 				{items.map((item, index) => (
 					<li key={index}>
-						{icons[index]}
+						<span className="approach-list__icon">{icons[index]}</span>
 						<div className="approach-list__content">
 							<span className="approach-list__title">{item.title}</span>
 							<div className="approach-list__divider"></div>

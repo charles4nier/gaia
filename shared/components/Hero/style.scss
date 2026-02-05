@@ -1,12 +1,20 @@
 .hero {
+	padding-top: 80px;	
 	position: relative;
-	padding: $spacing-5xl 0;
-	background-color: $white-secondary;
-	overflow: hidden;
-	border-bottom: 1px solid $black-tertiary;
-
+	background: linear-gradient(
+		to right,
+		#2D344F,
+		#5C7DB9,
+		#88C1ED
+	);
 
 	&__content {
+		padding: $spacing-5xl 0;
+		background: $white;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.container {
 		display: flex;
 	}
 
@@ -42,7 +50,6 @@
 	&__image {
 		position: relative !important;
 		display: block;
-		width: 80% !important;
 		height: auto !important;
 		margin: 0 auto;
 	}
@@ -58,7 +65,7 @@
 	@media (max-width: $breakpoint-md) {
 		min-height: auto;
 
-		&__content {
+		.container {
 			grid-template-columns: 1fr;
 			min-height: auto;
 		}
@@ -74,14 +81,14 @@
 		padding: 0;
 		margin-top: 0;
 		background-color: $white;
-		padding: $spacing-3xl 0;
+		padding: $spacing-3xl 0 0;
 
-		&__content {
+		.container {
 			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-direction: column;
+			flex-direction: column-reverse;
 		}
 
 
@@ -91,12 +98,13 @@
 			padding: 0;
 			max-width: 100%;
 			order: 1;
+
+			margin-bottom: $spacing-3xl;
 		}
 
 		&__image-column {
 			order: 0;
 			width: 100%;
-			margin-bottom: $spacing-3xl;
 		}
 
 		&__image-wrapper {
