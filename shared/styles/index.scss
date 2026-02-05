@@ -32,7 +32,6 @@ html {
 body {
 	width: 100%;
 	line-height: $line-height-normal;
-	padding-bottom: 327px;
 	background:  $black-primary;
 	pointer-events: none;
 
@@ -52,7 +51,6 @@ body {
   
 	@media (max-width: $breakpoint-sm) {
 	  padding-top: 60px;
-	  padding-bottom: 220px;
 	}
 }
 

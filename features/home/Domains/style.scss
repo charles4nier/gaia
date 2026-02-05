@@ -85,15 +85,17 @@
 
 	/* --- Mobile (≤ 768px) --- */
 	@media (max-width: $breakpoint-sm) {
-		padding: $spacing-2xl 0 0;
+		padding: $spacing-3xl 0 0;
 
 		&__title {
 			font-size: $h2-size-sm;
+			margin-bottom: $spacing-2xl;
 		}
 
 		&__wrapper {
 			grid-template-columns: 1fr;
 			gap: $spacing-xl;
+			margin-top: 0;
 		}
 	}
 
