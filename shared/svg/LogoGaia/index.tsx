@@ -9,22 +9,21 @@ interface LogoGaiaProps {
 
 export default function LogoGaia({
 	className,
-	width = 200,
-	height = 80
+	width = 180,
+	height = 40
 }: LogoGaiaProps) {
 	return (
 		<svg
-			width="240"
-			height="80"
-			viewBox="0 0 240 80"
-			xmlns="http://www.w3.org/2000/svg"
-			role="img"
-			aria-label="GAIA"
-			>
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 168 40"
+		role="img"
+		aria-label="GAIA"
+		width={width}
+		height={height}
+		>
 			<text
-				x="120"
-				y="52"
-				text-anchor="middle"
+				x="0"
+				y="32"
 				fill="white"
 				font-family="Inter, Helvetica Neue, Arial, sans-serif"
 				font-size="32"
@@ -34,5 +33,6 @@ export default function LogoGaia({
 				GAIA
 			</text>
 		</svg>
+
 	);
 }

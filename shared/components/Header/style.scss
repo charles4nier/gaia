@@ -12,7 +12,6 @@
 	height: 80px;
 	display: flex;
 	align-items: center;
-	// background-color: $white;
 	background: linear-gradient(
 		to right,
 		$black-primary,
@@ -33,12 +32,11 @@
 		transition: height 0.3s ease;
 	}
 
-		.header__link {
-
-			&:hover {
-				color: $accent-pink;
-			}
+	.header__link {
+		&:hover {
+			color: $accent-pink;
 		}
+	}
 
 	.header__logo {
 		padding: 0;
@@ -46,10 +44,6 @@
 		svg {
 			filter: none;
 		}
-	}
-
-	.header__burger span {
-		background-color: $black-primary;
 	}
 
 	.container {
@@ -294,6 +288,23 @@
 	}
 
 	@media (max-width: 768px) {
+
+		// background-color: $white;
+		background: linear-gradient(
+			to right,
+			$black-primary,
+			#2D344F 80%,
+		);
+		
+
+		.button-primary.desktop {
+			display: none;
+		}
+
+		.button-primary.mobile {
+			display: block;
+		}
+
 		.container {
 			height: 60px;
 		}
@@ -310,17 +321,21 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			gap: 6px;
+			gap: 8px;
 			background: none;
 			border: none;
 			cursor: pointer;
 
 			span {
-				width: 24px;
-				height: 2px;
-				background-color: $black-primary;
+				width: 34px;
+				height: 3px;
+				background-color: $white;
 				transition: all 0.3s ease;
 			}
+		}
+
+		&__logo svg {
+			width: 160px;
 		}
 	}
 
@@ -329,12 +344,7 @@
 			height: 65px;
 		}
 
-		&__logo {
-			svg {
-				width: 100px;
-				height: 40px;
-			}
-		}
+
 
 		&__mobile {
 			width: 280px;

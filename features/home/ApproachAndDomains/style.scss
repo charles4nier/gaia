@@ -29,8 +29,14 @@
 	}
 
 	@media (max-width: 768px) {
+
+		background: $white-tertiary;
 		padding: $spacing-3xl 0; // 48px sur mobile
 		
+		> .container {
+			padding: $spacing-2xl;
+		}
+
 		&__wrapper {
 			gap: $spacing-3xl;
 		}
@@ -97,5 +103,12 @@
 
 	@media (max-width: 768px) {
 		padding: $spacing-3xl 0; // 48px sur mobile
+
+		.container {
+			max-width: 100%;
+			border-radius: 0;
+			box-shadow: none;
+			padding: $spacing-2xl;
+		}
 	}
 }

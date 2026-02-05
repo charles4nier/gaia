@@ -169,9 +169,8 @@ export default function Header() {
 					</nav>
 				</div>
 
-				<Link href="/contact" className={"button-primary"}>
+				<Link href="/contact" className={"button-primary desktop"}>
 					Parlons de votre projet
-					
 				</Link>
 
 				<button
@@ -221,6 +220,10 @@ export default function Header() {
 						</li>
 					))}
 				</ul>
+
+				<Link href="/contact" className={"button-primary"}>
+					Parlons de votre projet
+				</Link>
 			</nav>
 		</>
 		</header>

@@ -81,7 +81,11 @@
 		position: relative;
 		padding: 0;
 		margin-top: 0;
-		background-color: $white;
+		background: linear-gradient(
+			to right,
+			$black-primary,
+			#2D344F 80%,
+		);
 		padding: $spacing-3xl 0 0;
 
 		.container {
