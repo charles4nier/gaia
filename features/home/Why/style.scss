@@ -1,6 +1,6 @@
 .why {
 	padding: $section-padding-y-desktop 0;
-	background-color: $white;
+	background-color: $white-tertiary;
 	border-bottom: $border;
 
 	&__title {
@@ -20,7 +20,7 @@
 			left: 0;
 			width: 48px;
 			height: 2px;
-			background: $accent-green;
+			background: $accent-pink;
 		}
 	}
 
@@ -45,7 +45,7 @@
 	&__cta-box {
 		background: $white;
 		padding: $spacing-3xl;
-		border-radius: 4px;
+		border-radius: 20px;
 		border: $border-card;
 		box-shadow: $shadow-soft;
 		display: flex;
