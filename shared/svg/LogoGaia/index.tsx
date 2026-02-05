@@ -14,25 +14,25 @@ export default function LogoGaia({
 }: LogoGaiaProps) {
 	return (
 		<svg
-			width="300"
-			height="100"
-			viewBox="0 0 300 100"
+			width="240"
+			height="80"
+			viewBox="0 0 240 80"
 			xmlns="http://www.w3.org/2000/svg"
 			role="img"
 			aria-label="GAIA"
 			>
-
-		<text
-			x="150"
-			y="62"
-			text-anchor="middle"
-			font-size="42"
-			fill="white"
-		>
-			GAIA
-		</text>
+			<text
+				x="120"
+				y="52"
+				text-anchor="middle"
+				fill="white"
+				font-family="Inter, Helvetica Neue, Arial, sans-serif"
+				font-size="32"
+				font-weight="400"
+				letter-spacing="0.35em"
+			>
+				GAIA
+			</text>
 		</svg>
-
-
 	);
 }
