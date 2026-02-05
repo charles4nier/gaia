@@ -3,8 +3,9 @@
 	position: relative;
 	background: linear-gradient(
 		to right,
-		#2D344F,
-		#5C7DB9,
+		$black-primary,
+		#2D344F 80%,
+		#5C7DB9 90%,
 		#88C1ED
 	);
 

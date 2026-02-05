@@ -39,13 +39,17 @@
 
 .approach-domains__quote {
 	width: 100vw;
-	padding: $spacing-3xl 0;
+	padding: $spacing-5xl 0;
 	position: relative;
 	left: 50%;
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
 	background: $white-tertiary; 
+
+	&--first {
+		padding: 0 0 $spacing-5xl 0;
+	}
 
 	.container {
 		position: relative;

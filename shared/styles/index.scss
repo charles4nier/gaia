@@ -27,23 +27,13 @@ body {
 	color: inherit;
 }
 html {
-	background: linear-gradient(
-		to right,
-		#2D344F,
-		#5C7DB9,
-		#88C1ED
-	);
+	background:  $black-primary;
 }
 body {
 	width: 100%;
 	line-height: $line-height-normal;
 	padding-bottom: 327px;
-	background: linear-gradient(
-		to right,
-		#2D344F,
-		#5C7DB9,
-		#88C1ED
-	);
+	background:  $black-primary;
 	pointer-events: none;
 
 	&:before {
@@ -67,6 +57,8 @@ body {
 }
 
 main {
+	position: relative;
+	z-index: 2;
 	background-color: $white;
 }
 
