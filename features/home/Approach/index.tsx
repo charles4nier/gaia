@@ -40,9 +40,19 @@ export default function Approach() {
 			<circle cx="15" cy="12" r="2"/>
 			<circle cx="11" cy="18" r="2"/>
 		</svg>,
-		<svg key="3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.75" strokeLinejoin="round"/>
+		<svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+			<path d="M24 6l4.7 9.8 10.8 1
+					-8.2 7.1 2.4 10.5
+					L24 30.5 14.3 34.4
+					16.7 23.9 8.5 16.8
+					19.3 15.8 24 6z"
+				stroke="white"
+				stroke-width="2"
+				fill="none"
+				stroke-linejoin="round"/>
 		</svg>
+   
 	];
 
 	return (
