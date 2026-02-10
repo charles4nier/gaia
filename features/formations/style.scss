@@ -5,4 +5,8 @@
 	.hero__image {
 		height: auto !important;
 	}
+
+	.hero__image-wrapper img {
+		transform: scale(0.75);
+	}
 }

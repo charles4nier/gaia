@@ -26,8 +26,7 @@ export default function FormationCard({
 		<div className={`formation-card ${isExpanded ? 'formation-card--expanded' : ''}`}>
 			<div className="formation-card__header" onClick={() => setIsExpanded(!isExpanded)}>
 				<h3 className="formation-card__title">{title}</h3>
-				<button className="formation-card__toggle" aria-label={isExpanded ? 'Réduire' : 'Voir plus'}>
-					{isExpanded ? 'Voir moins' : 'Voir plus'}
+				<button className={`formation-card__toggle ${isExpanded ? 'formation-card__toggle--expanded' : ''}`} aria-label={isExpanded ? 'Réduire' : 'Voir plus'}>
 					<svg
 						className={`formation-card__icon ${isExpanded ? 'formation-card__icon--expanded' : ''}`}
 						width="16"

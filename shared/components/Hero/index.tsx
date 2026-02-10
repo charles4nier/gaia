@@ -4,9 +4,10 @@ import type { ReactNode } from 'react';
 
 interface HeroProps {
 	children: ReactNode;
+	src: string;
 }
 
-export default function Hero({ children}: HeroProps) {
+export default function Hero({ src = '/hero-image.png', children}: HeroProps) {
 	return (
 		<div className="hero">
 			<div className="hero__content">
@@ -17,7 +18,7 @@ export default function Hero({ children}: HeroProps) {
 					<div className="hero__image-column">
 						<div className="hero__image-wrapper">
 							<Image
-								src="/hero-image.png"
+								src={src}
 								alt="GAIA - Audit Conseil Formation"
 								fill
 								priority={true}

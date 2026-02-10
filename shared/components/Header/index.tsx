@@ -174,7 +174,7 @@ export default function Header() {
 				</Link>
 
 				<button
-					className={`${CLASS_NAME}__burger ${isOpen ? 'open' : ''}`}
+					className={`${CLASS_NAME}__burger ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}
 					onClick={() => {
 						if (isOpen) {
 							handleClose();
