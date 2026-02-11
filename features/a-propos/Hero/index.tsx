@@ -3,7 +3,7 @@ import Hero from '@shared/components/Hero';
 
 export default function AProposHero() {
 	return (
-		<Hero>
+		<Hero src="/hero-a-propos.png">
 			<div className="hero__text">
 				<h1 className="hero__title">GAIA – Audit · Conseil · Formation</h1>
 				<p className="hero__description text-level-2">
