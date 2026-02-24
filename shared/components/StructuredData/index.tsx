@@ -1,8 +1,8 @@
 import { siteConfig } from '@shared/config/seo';
 
 interface StructuredDataProps {
-	type: 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Service';
-	data?: any;
+	type: 'Organization' | 'WebSite' | 'WebPage' | 'BreadcrumbList' | 'Service';
+	data?: Record<string, string | undefined>;
 }
 
 export default function StructuredData({
@@ -45,6 +45,16 @@ export default function StructuredData({
 						},
 						'query-input': 'required name=search_term_string'
 					}
+				};
+
+			case 'WebPage':
+				if (!data) return null;
+				return {
+					'@context': 'https://schema.org',
+					'@type': 'WebPage',
+					name: data.name ?? siteConfig.name,
+					description: data.description ?? siteConfig.description,
+					url: `${baseUrl}${data.url ?? ''}`
 				};
 
 			case 'BreadcrumbList':

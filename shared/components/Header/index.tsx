@@ -8,7 +8,7 @@ import './style.scss';
 
 const CLASS_NAME = 'header';
 
-const navLinks = [
+const baseNavLinks = [
 	{ name: 'Accueil', path: '/' },
 	{ name: 'Offres', path: '/offres' },
 	{ name: 'Formations', path: '/formations' },
@@ -26,6 +26,10 @@ export default function Header() {
 	const activeLinkRef = useRef<HTMLAnchorElement>(null);
 
 	const isActive = (path: string) => pathname === path;
+	const isContactPage = pathname === '/contact';
+	const navLinks = isContactPage
+		? [...baseNavLinks, { name: 'Contact', path: '/contact' }]
+		: baseNavLinks;
 
 	const handleClose = () => {
 		setIsClosing(true);
@@ -132,7 +136,7 @@ export default function Header() {
 			window.removeEventListener('resize', updateIndicatorPosition);
 			clearTimeout(timeoutId);
 		};
-	}, [pathname, navLinks, isScrolled]);
+	}, [pathname, isContactPage, isScrolled]);
 
 	return (
 		<header className={`${CLASS_NAME} ${isScrolled ? 'scrolled' : ''}`}>
@@ -169,9 +173,11 @@ export default function Header() {
 					</nav>
 				</div>
 
-				<Link href="/contact" className={"button-primary desktop"}>
-					Parlons de votre projet
-				</Link>
+				{!isContactPage && (
+					<Link href="/contact?objet=projet" className={"button-primary desktop"}>
+						Parlons de votre projet
+					</Link>
+				)}
 
 				<button
 					className={`${CLASS_NAME}__burger ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}
@@ -221,9 +227,11 @@ export default function Header() {
 					))}
 				</ul>
 
-				<Link href="/contact" className={"button-primary"}>
-					Parlons de votre projet
-				</Link>
+				{!isContactPage && (
+					<Link href="/contact?objet=projet" className={"button-primary"}>
+						Parlons de votre projet
+					</Link>
+				)}
 			</nav>
 		</>
 		</header>

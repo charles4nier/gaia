@@ -1,0 +1,104 @@
+@import '@shared/styles/variables';
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-lg;
+	max-width: 640px;
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing-sm;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: $spacing-lg;
+
+		@media (max-width: $breakpoint-sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__label {
+		font-family: $font-family-primary;
+		font-size: $body-size-desktop;
+		font-weight: $font-weight-medium;
+		color: $black-primary;
+	}
+
+	&__required {
+		color: $error;
+	}
+
+	&__input,
+	&__select,
+	&__textarea {
+		width: 100%;
+		padding: $spacing-md $spacing-lg;
+		font-family: $font-family-primary;
+		font-size: $body-size-desktop;
+		color: $black-primary;
+		background: $white;
+		border: 1px solid $black-tertiary;
+		border-radius: 8px;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+		&::placeholder {
+			color: $black-tertiary;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $accent-green;
+			box-shadow: 0 0 0 2px rgba(118, 216, 198, 0.25);
+		}
+
+		&[aria-invalid='true'] {
+			border-color: $error;
+		}
+	}
+
+	&__select {
+		cursor: pointer;
+		appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231e1f22' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right $spacing-lg center;
+		background-size: 16px;
+		padding-right: $spacing-3xl;
+	}
+
+	&__textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+
+	&__error {
+		font-size: $small-size-desktop;
+		color: $error;
+	}
+
+	&__submit {
+		width: 100%;
+		align-self: flex-start;
+		margin-top: $spacing-sm;
+	}
+
+	&__success {
+		padding: $spacing-3xl;
+		background: #eef4ea;
+		border: 1px solid rgba(60, 110, 60, 0.15);
+		border-radius: 8px;
+		max-width: 640px;
+	}
+
+	&__success-text {
+		font-family: $font-family-primary;
+		font-size: $body-size-desktop;
+		color: $black-primary;
+		margin: 0;
+	}
+}

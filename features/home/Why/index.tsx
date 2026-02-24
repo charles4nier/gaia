@@ -24,7 +24,7 @@ export default function Why() {
 					</div>
 					<div className="why__cta-box">
 						<p className="why__cta-intro text-level-2">{ctaIntro}</p>
-						<Link href="/contact" className="button-primary">
+						<Link href="/contact?objet=projet" className="button-primary">
 							{buttonLabel}
 						</Link>
 					</div>

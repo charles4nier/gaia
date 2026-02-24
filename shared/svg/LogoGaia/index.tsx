@@ -24,7 +24,7 @@ export default function LogoGaia({
 			<text
 				x="0"
 				y="32"
-				fill="white"
+				fill="#FBD456"
 				font-family="Inter, Helvetica Neue, Arial, sans-serif"
 				font-size="32"
 				font-weight="400"

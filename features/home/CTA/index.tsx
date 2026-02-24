@@ -15,7 +15,7 @@ export default function CTA({
 					<p className="cta__description">{description}</p>
 				)}
 				{buttonLabel && (
-					<Link href="/contact" className="button-contact">
+					<Link href="/contact?objet=projet" className="button-contact">
 						{buttonLabel}
 					</Link>
 				)}

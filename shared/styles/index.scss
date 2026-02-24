@@ -10,6 +10,13 @@ html,
 body {
 	overflow-x: hidden;
 	min-height: 100%;
+	background: linear-gradient(
+		to right,
+		$black-primary,
+		#2D344F 80%,
+		#5C7DB9 90%,
+		#88C1ED
+	);
 }
 
 *,
@@ -26,13 +33,9 @@ body {
 	font: inherit;
 	color: inherit;
 }
-html {
-	background:  $black-primary;
-}
 body {
 	width: 100%;
 	line-height: $line-height-normal;
-	background:  $black-primary;
 	pointer-events: none;
 
 	&:before {
@@ -203,12 +206,10 @@ a {
 	transition: all 0.3s ease;
 	line-height:29px;
 	font-size: $small-size-desktop;
-	transform: scale(1);
 	&:hover {
 		background-color: $accent-yellow;
 		box-shadow: $shadow-strong;
 		color: $black-primary;
-		transform: scale(1.1);
 	}
 	border-radius: 10px;
 	box-shadow: $shadow-soft;

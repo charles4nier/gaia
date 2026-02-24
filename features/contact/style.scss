@@ -1,0 +1,63 @@
+@import '@shared/styles/variables';
+
+.contact {
+	background: linear-gradient(
+		to right,
+		$black-primary,
+		#2D344F 80%,
+		#5C7DB9 90%,
+		#88C1ED
+	);
+	padding: $spacing-5xl 0 0;
+
+	&-section {
+		padding: $spacing-5xl 0;
+		border-radius: 20px 20px 0 0;
+		background-color: $white-secondary;
+	
+		&__title {
+			width: 50%;
+			font-family: $font-family-primary;
+			font-size: $h2-size-desktop;
+			font-weight: $font-weight-medium;
+			color: $black-primary;
+			line-height: $line-height-tight;
+			margin-bottom: $title-margin-bottom-desktop;
+			position: relative;
+			padding-bottom: $spacing-md;
+	
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 48px;
+				height: 2px;
+				background: $accent-pink;
+			}
+		}
+	
+		@media (max-width: $breakpoint-lg) {
+			padding: $spacing-4xl 0;
+	
+			&__title {
+				font-size: $h2-size-lg;
+				margin-bottom: $spacing-2xl;
+			}
+		}
+	
+		@media (max-width: $breakpoint-sm) {
+			padding: $spacing-3xl 0;
+	
+			&__title {
+				width: 100%;
+				font-size: $h2-size-sm;
+				
+			}
+		}
+	}
+	
+	@media (max-width: $breakpoint-sm) {
+		padding:  0;
+	}
+}

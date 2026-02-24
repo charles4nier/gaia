@@ -67,7 +67,7 @@ export default function FormationCard({
 						<p className="formation-card__field-value">{methodologie}</p>
 					</div>
 				)}
-				<Link href={`/contact`} className="button-primary">S'inscrire</Link>
+				<Link href="/contact?objet=formation" className="button-primary">S'inscrire</Link>
 			</div>
 		</div>
 	);
