@@ -32,12 +32,6 @@
 		transition: height 0.3s ease;
 	}
 
-	.header__link {
-		&:hover {
-			color: $accent-pink;
-		}
-	}
-
 	.header__logo {
 		padding: 0;
 
@@ -153,7 +147,7 @@
 		transition: color 0.3s ease;
 
 		&:hover {
-			color: $black-secondary;
+			color: $accent-pink;
 		}
 
 		&.active {
